@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--==================== FAVICON ====================-->
-    <link rel="icon" href="/public/images/logo.png" />
+    <link rel="icon" href="images/logo.png" />
 
     <!--========== CSS ==========-->
-    <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="main.css">
     <!--========== Title ==========-->
     <title>Pantry - Recipe, Meal Plan, Grocery List & More</title>
-
    
     <!-- fb & Whatsapp -->
     <meta property="og:site_name" content="Pantry" />
@@ -19,21 +18,30 @@
       property="og:description"
       content="Pantry is a recipe, meal plan, grocery list and more. It's a one stop shop for all your meal planning needs."
     />
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <meta property="og:type" content="website" />
     <meta property="og:image:type" content="image/jpeg" />
     <!--  size up to 300px. Anything above this will not work in WhatsApp -->
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:url" content="https://http://pantry-app.ezyro.com/?i=1" />
+    <meta property="og:url" content="https://pantry-database.web.app" />
   </head>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCYMJPN7L6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCYMJPN7L6');
+</script>
   <body>
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrollTop show-scroll" id="scroll-top">
-      <i class="bx bx-chevron-up scrollTop_icon"></i>
+     <!--========== SCROLL TOP ==========-->
+     <a href="#" class="scrollTop show-scroll" id="scroll-top">
+      <ion-icon name="arrow-up-outline"></ion-icon>
     </a>
+
 
     <!--========== HEADER ==========-->
     <header class="l-header" id="header">
@@ -57,7 +65,13 @@
             <li class="nav_item">
               <a href="#contact" class="nav_link">Contact</a>
             </li>
-
+           
+            <li class="nav_item">
+              <a href="https://medium.com/@pantryapp507" class="nav_link">Blog</a>
+            </li>
+            <li class="nav_item">
+              <a href="#pricing" class="nav_link">Pricing</a>
+            </li>
             <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
           </ul>
         </div>
@@ -93,8 +107,8 @@
           <div class="home_container bd-container bd-grid">
             <div class="home_data">
             
-              <h2 class="home_subtitle">Recipe, Meal Plan, Grocery List & More</h2>
-              <h1 class="home_sub_2">Organize your favorite recipes, meal plan, and grocery list all in one place.</h1>
+              <h2 class="home_subtitle"><span class = "home_subtitle-app-name">Pantry</span> - Recipe, Meal Plan, Grocery List. Organized. All in one place.</h2>
+              <h1 class="home_sub_2">Pantry is a recipe, meal plan, grocery list and more. It's a one stop shop for all your meal planning needs.</h1>
              <!--appstore png -->
              <div class="app_store">
                 <a href="#"
@@ -109,7 +123,7 @@
             </div>
   
             <img
-              src="images/landing.png"
+              src="images/landing-1.png"
               alt="Image of landing page"
               class="home_img"
             />
@@ -203,13 +217,55 @@
             View nutrition information for your recipes.
         </p>
         </div>
+        <div class="services_content">
+        <!--meal plan-->
+        <ion-icon name="search-outline" class="services_img"></ion-icon>
+        <h3 class="services_title">Search</h3>
+        <p class="services_description">
+            Search for recipes by name, ingredients, or tags.
+        </p>
+        </div>
+        <div class="services_content">
+        <!--meal plan-->
+        <ion-icon name="pricetag-outline" class="services_img"></ion-icon>
+        <h3 class="services_title">Tags</h3>
+        <p class="services_description">
+            Add tags to your recipes to help you find them.
+        </p>
+        </div>
+        <div class="services_content">
+        <!--virtual chef-->
+        <ion-icon name="person-outline" class="services_img"></ion-icon>
+        <h3 class="services_title">Virtual Chef</h3>
+        <p class="services_description">
+            Use the Virtual Chef to find recipes based on ingredients you have on hand.
+        </p>
+        </div>
+        <!--share play-->
+        <div class="services_content">
+        <ion-icon name="share-outline" class="services_img"></ion-icon>
+        <h3 class="services_title">Share Play</h3>
+        <p class="services_description">
+            Cook with friends and family with Share Play.
+        </p>
+        </div>
+
+        <div class="services_content">
+        <ion-icon name="add-outline" class="services_img"></ion-icon>
+        <h3 class="services_title">And Many More</h3>
+        <p class="services_description">
+            There are many more features to explore.
+        </p>
+        </div>
+        
+        
 
         
   </section>
 
     <!--========== ABOUT ==========-->
     <section class="services section bd-container" id="services">
-        <span class="section-subtitle">What others are saying</span>
+        <span class="section-subtitle">Don't take our word for it, Take theirs</span>
         <h2 class="section-title">Reviews</h2>
         <div class="reviews_container bd-grid">
             <div class="services_container bd-grid">
@@ -296,21 +352,7 @@
        
 
     <!--========== MAIN JS ==========-->
-    <script src="/public/main.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.18.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-performance-compat.js"></script>
-  
-
-    
+    <script src="main.js"></script>
   </body>
 </html>
 
