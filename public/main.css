@@ -132,9 +132,14 @@ body.dark-theme {
   cursor: pointer;
 }
 
+.home{
+ padding: 0;
+  margin: 0;
+  height: 80vh;
+}
 /*========== CLASS CSS ==========*/
 .section {
-  padding: 7rem 0 2rem;
+  padding: var(--mb-6) 0;
 }
 .section-title,
 .section-subtitle {
@@ -755,7 +760,7 @@ body.dark-theme {
    
     align-items: center;
     padding-bottom: 3rem;
-    padding-top: 10rem;
+   
     
   }
   .home_img{
