@@ -145,6 +145,7 @@ body.dark-theme {
 .section-subtitle {
   text-align: center;
 }
+
 .section-title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
@@ -351,12 +352,12 @@ body.dark-theme {
 .home_title {
   font-size: var(--big-font-size);
   color: var(--first-color);
-  margin-bottom: var(--mb-1);
+  
 }
 .home_subtitle {
   font-size: var(--h1-font-size);
   color: var(--title-color);
-  margin-bottom: var(--mb-4);
+  
 }
 .home_img {
   width: 300px;
@@ -774,6 +775,7 @@ body.dark-theme {
 /*fit the whole width of the screen*/
   body {
     margin: 0;
+    padding-top: 8rem;
   }
   .app_store {
     margin: 0 var(--mb-1) 0 0;
@@ -790,7 +792,7 @@ body.dark-theme {
     color: var(--text-color-grey);
   }
   .home_img {
-    width: 300px;
+    width: 600px;
     margin-top: var(--mb-1);
   }
   .section-title {
