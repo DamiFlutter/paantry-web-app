@@ -18,6 +18,29 @@
       property="og:description"
       content="Pantry is a recipe, meal plan, grocery list and more. It's a one stop shop for all your meal planning needs."
     />
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZ5HpQfyUYHP39oOK_u2LcclkSgCv5kVM",
+        authDomain: "pantry-database.firebaseapp.com",
+        projectId: "pantry-database",
+        storageBucket: "pantry-database.appspot.com",
+        messagingSenderId: "884071730946",
+        appId: "1:884071730946:web:5dae4c2230f21649bf3c1b",
+        measurementId: "G-ERB946X61X"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <meta property="og:type" content="website" />
@@ -73,7 +96,9 @@
             <li class="nav_item">
               <a href="https://medium.com/@pantryapp507" class="nav_link">Blog</a>
             </li>
-            
+            <!-- Become a  chef btn -->
+            <li class="nav_item" id="nav-be-a-chef">
+              <a href="become-a-chef.html" class="nav_link">Become a Chef</a>
           </ul>
         </div>
 

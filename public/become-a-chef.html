@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Chef</title>
+    <link rel="icon" href="images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZ5HpQfyUYHP39oOK_u2LcclkSgCv5kVM",
+        authDomain: "pantry-database.firebaseapp.com",
+        projectId: "pantry-database",
+        storageBucket: "pantry-database.appspot.com",
+        messagingSenderId: "884071730946",
+        appId: "1:884071730946:web:5dae4c2230f21649bf3c1b",
+        measurementId: "G-ERB946X61X"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- <script src="form.js"></script> -->
+  </head>
+
+  <body>
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="/" class="nav_logo">
+            <img src="images/logo.png" alt="" class="nav_logo-img" />
+        </a>
+
+       
+
+        <div class="nav_toggle" id="nav-toggle">
+          <!--When clicked activate the class "opened"
+          to the button tag as well to the 4 SVG lines-->
+          <button
+            class="menu"
+            aria-label="Abrir Menu"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+          >
+            <svg width="40" height="41" viewBox="0 0 100 100">
+              <path
+                class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path
+                class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+      <!--========== BECOME A CHEF FORM ==========-->
+     <!--========== BECOME A CHEF FORM ==========-->
+<div class="form">
+  <form id="application-form">
+    <div class="title">Become a Chef 👨🏽‍🍳</div>
+    <div class="subtitle">Fill out the form below to apply, we will get back to you as soon as possible.</div>
+    <!--divider-->
+    <div class="line"></div>
+    <div class="form-group">
+      <label for="pantry-name">Pantry Handle:</label>
+      <input type="text" id="pantryname" name="pantry_name" required>
+    </div>
+    <div class="form-group">
+      <label for="chef-name">Full Name:</label>
+      <input type="text" id="chefname" name="chef_name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="social-links">Social Media Links:</label>
+      <textarea id="sociallinks" name="social_links"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+    </div>
+    <!-- //tags, you can add more tags by adding more <option> tags -->
+      <fieldset>
+        <legend>Select your professions:</legend>
+        <div class="checkbox-group">
+          <div class="checkbox">
+            <input type="checkbox" id="chef" name="professions[]" value="chef">
+            <label for="chef">Chef</label>
+          </div>
+      
+          <div class="checkbox">
+            <input type="checkbox" id="mixologist" name="professions[]" value="mixologist">
+            <label for="mixologist">Mixologist</label>
+          </div>
+      
+          <div class="checkbox">
+            <input type="checkbox" id="barista" name="professions[]" value="barista">
+            <label for="barista">Barista</label>
+          </div>
+      
+          <div class="checkbox">
+            <input type="checkbox" id="baker" name="professions[]" value="baker">
+            <label for="baker">Baker</label>
+          </div>
+      
+          <div class="checkbox">
+            <input type="checkbox" id="sommelier" name="professions[]" value="sommelier">
+            <label for="sommelier">Sommelier</label>
+          </div>
+      
+          <div class="checkbox">
+            <input type="checkbox" id="pastrychef" name="professions[]" value="pastry-chef">
+            <label for="pastry-chef">Pastry Chef</label>
+          </div>
+        </div>
+      </fieldset>
+      
+
+
+    <input type="submit" value="Submit" class="btn-solid">
+    <div class="terms">
+      By submitting this form, you agree to our<a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+    </div>
+   
+    <div class="form-group">
+     
+     
+    </div>
+      
+  </form>
+  <script>
+  
+    document.getElementById('application-form').addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZ5HpQfyUYHP39oOK_u2LcclkSgCv5kVM",
+        authDomain: "pantry-database.firebaseapp.com",
+        projectId: "pantry-database",
+        storageBucket: "pantry-database.appspot.com",
+        messagingSenderId: "884071730946",
+        appId: "1:884071730946:web:5dae4c2230f21649bf3c1b",
+        measurementId: "G-ERB946X61X"
+      };
+    
+      firebase.initializeApp(firebaseConfig);
+       var db = firebase.firestore();
+      console.log("submitting form with data: ");
+     
+        e.preventDefault();
+
+        // Get form values
+        var pantryname = document.getElementById('pantryname').value;
+        var chefname = document.getElementById('chefname').value;
+        var email = document.getElementById('email').value;
+        var bio = document.getElementById('bio').value;
+        var sociallinks = document. getElementById('sociallinks').value;
+        var location = document.getElementById('location').value;
+        var chef = document.getElementById('chef').value;
+        var mixologist = document.getElementById('mixologist').value;
+        var barista = document.getElementById('barista').value;
+        var baker = document.getElementById('baker').value;
+        var sommelier = document.getElementById('sommelier').value;
+        var pastryChef = document.getElementById('pastrychef').value;
+        var professions = [];
+        if (document.getElementById('chef').checked) {
+          professions.push(chef);
+        }
+        if (document.getElementById('mixologist').checked) {
+          professions.push(mixologist);
+        }
+        if (document.getElementById('barista').checked) {
+          professions.push(barista);
+        }
+        if (document.getElementById('baker').checked) {
+          professions.push(baker);
+        }
+        if (document.getElementById('sommelier').checked) {
+          professions.push(sommelier);
+        }
+        if (document.getElementById('pastrychef').checked) {
+          professions.push(pastryChef);
+        }
+        console.log(professions);
+       
+
+        // Save data to Firebase Firestore
+        const chefApplicationRef = firebase.firestore().collection('chefApplication');
+        const newPantryRef = chefApplicationRef.doc();
+  newPantryRef.set({
+    pantryname: appendChef(pantryname),
+    chefname: chefname,
+    email: email,
+    bio: bio,
+    sociallinks: sociallinks,
+    isApproved: false,
+    isRejected: false,
+    isPending: true,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    location: location,
+    professions: professions
+  })
+  .then(() => {
+    console.log("Document successfully written!");
+    alert("Thank you for applying! We will get back to you as soon as possible.");
+    //clear form
+    document.getElementById('application-form').reset();
+  })
+  .catch((error) => {
+    console.error("Error writing document: ", error);
+    alert("Error: " + error);
+    //clear form
+    document.getElementById('application-form').reset();
+  });
+
+        // Clear form
+       // document.getElementById('application-form').reset();
+    }
+    const form = document.getElementById('application-form');
+    form.addEventListener('submit', submitForm);
+
+   //append chef to pantry name
+    function appendChef(pantryname) {
+     //if name starts with @, return name, remove @
+      if (pantryname.charAt(0) == '@') {
+        return pantryname.substring(1);
+      }
+      //else return name with @
+      return pantryname;
+    }
+
+</script>
+</div>
+</body> 
+</html>
+
+
+      
