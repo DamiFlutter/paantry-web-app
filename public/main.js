@@ -1,18 +1,3 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAZ5HpQfyUYHP39oOK_u2LcclkSgCv5kVM",
-  authDomain: "pantry-database.firebaseapp.com",
-  projectId: "pantry-database",
-  storageBucket: "pantry-database.appspot.com",
-  messagingSenderId: "884071730946",
-  appId: "1:884071730946:web:5dae4c2230f21649bf3c1b",
-  measurementId: "G-ERB946X61X"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-
-
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
@@ -64,8 +49,6 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
-/*==================== SUBMIT FORM ====================*/
-
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
